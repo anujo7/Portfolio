@@ -91,15 +91,11 @@ const Skills: React.FC = () => {
           {categories.map((category) => (
             <div key={category.id} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 p-8 transition-all hover:shadow-2xl hover:-translate-y-1">
               <h3 className="text-2xl font-semibold mb-6 text-teal-600 dark:text-teal-400">{category.name}</h3>
-              <ul className="space-y-5">
+              <ul className="flex flex-wrap gap-4">
                 {skills.filter((skill) => skill.category === category.id).map((skill, idx) => (
-                  <li key={idx} className="flex items-center justify-between group">
-                    <span className="flex items-center text-lg font-medium text-gray-800 dark:text-gray-100">
-                      {skillIcons[skill.name]}{skill.name}
-                    </span>
-                    <span className="ml-4 px-3 py-1 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 border border-teal-100 dark:border-teal-800 rounded-lg text-sm font-semibold group-hover:bg-teal-100 dark:group-hover:bg-teal-800 transition-all">
-                      {skill.level}%
-                    </span>
+                  <li key={idx} className="flex items-center space-x-2 bg-teal-50 dark:bg-teal-900/30 px-4 py-2 rounded-lg text-lg font-medium text-gray-800 dark:text-gray-100 shadow-sm hover:bg-teal-100 dark:hover:bg-teal-800 transition-all">
+                    {skillIcons[skill.name]}
+                    <span>{skill.name}</span>
                   </li>
                 ))}
               </ul>
