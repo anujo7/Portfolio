@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailSumImg from '../assets/email_sum.png'
-import SmartBrain from '../assets/smartbrain.PNG'
+import SmartBrain from '../assets/smartbrain.png'
 import Web3 from '../assets/Web3.png'
 
 interface Project {
